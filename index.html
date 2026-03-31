@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Repossify</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#8b5cf6",
+          },
+          animation: {
+            fade: "fade 1s ease forwards",
+            float: "float 6s ease-in-out infinite",
+            pulseSoft: "pulseSoft 4s ease-in-out infinite",
+          },
+          keyframes: {
+            fade: {
+              "0%": { opacity: 0, transform: "translateY(20px)" },
+              "100%": { opacity: 1, transform: "translateY(0)" },
+            },
+            float: {
+              "0%, 100%": { transform: "translateY(0px)" },
+              "50%": { transform: "translateY(-8px)" },
+            },
+            pulseSoft: {
+              "0%, 100%": { opacity: 0.4 },
+              "50%": { opacity: 0.8 },
+            },
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="bg-zinc-950 text-zinc-300 min-h-screen flex items-center justify-center overflow-hidden">
+
+  <div class="absolute w-[600px] h-[600px] bg-primary/20 blur-3xl rounded-full top-[-150px] left-[-150px] animate-pulseSoft"></div>
+  <div class="absolute w-[500px] h-[500px] bg-primary/10 blur-3xl rounded-full bottom-[-150px] right-[-150px] animate-pulseSoft"></div>
+
+  <div class="relative text-center space-y-8 px-6 animate-fade">
+
+    <div class="inline-block px-4 py-1 text-xs border border-zinc-700 rounded-full text-zinc-400 backdrop-blur">
+      🚧 UNDER DEVELOPMENT
+    </div>
+
+    <h1 class="text-6xl font-bold text-white tracking-tight">
+      Repossify
+    </h1>
+
+    <p class="text-zinc-400 max-w-xl mx-auto text-lg leading-relaxed">
+      Repossify is a modern platform designed to simplify how you manage, organize, 
+      and interact with your repositories. Built for speed, clarity, and developers 
+      who want full control.
+    </p>
+
+    <div class="flex justify-center gap-4 pt-4">
+      <a href="https://github.com/d4nilpzz/repossify"
+         target="_blank"
+         class="px-6 py-2 rounded-lg bg-primary text-white hover:bg-primary/80 transition shadow-lg shadow-primary/20">
+        View on GitHub
+      </a>
+
+      <button class="px-6 py-2 rounded-lg hover:border-primary/50 hover:text-white transition">
+        Coming soon ...
+      </button>
+    </div>
+
+    <!-- Footer -->
+    <p class="text-xs text-zinc-600 pt-6">
+      © 2026 Repossify. All rights reserved.
+    </p>
+
+  </div>
+
+</body>
+</html>
