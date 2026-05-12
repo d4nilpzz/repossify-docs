@@ -1,101 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Repossify</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="title" content="Repossify">
-  <meta name="description" content="Repossify is a modern platform to manage and organize repositories. Currently in development.">
+    <meta name="title" content="Repossify">
+    <meta name="description"
+        content="Repossify is a modern platform to manage and organize repositories. Currently in development.">
 
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://repossify.dev/">
-  <meta property="og:title" content="Repossify">
-  <meta property="og:description" content="Repossify is a modern platform to manage and organize repositories. Currently in development.">
-  <meta property="og:image" content="https://repossify.dev/repossify.png">
-  <meta property="og:image:type" content="image/png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://repossify.dev/">
+    <meta property="og:title" content="Repossify">
+    <meta property="og:description"
+        content="Repossify is a modern platform to manage and organize repositories. Currently in development.">
+    <meta property="og:image" content="https://repossify.dev/public/repossify.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://repossify.dev/">
-  <meta name="twitter:title" content="Repossify">
-  <meta name="twitter:description" content="A modern platform for repository management.">
-  <meta name="twitter:image" content="https://repossify.dev/repossify.png">
-  
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://repossify.dev/">
+    <meta name="twitter:title" content="Repossify">
+    <meta name="twitter:description" content="A modern platform for repository management.">
+    <meta name="twitter:image" content="https://repossify.dev/public/repossify.png">
 
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: "#8b5cf6",
-          },
-          animation: {
-            fade: "fade 1s ease forwards",
-            float: "float 6s ease-in-out infinite",
-            pulseSoft: "pulseSoft 4s ease-in-out infinite",
-          },
-          keyframes: {
-            fade: {
-              "0%": { opacity: 0, transform: "translateY(20px)" },
-              "100%": { opacity: 1, transform: "translateY(0)" },
-            },
-            float: {
-              "0%, 100%": { transform: "translateY(0px)" },
-              "50%": { transform: "translateY(-8px)" },
-            },
-            pulseSoft: {
-              "0%, 100%": { opacity: 0.4 },
-              "50%": { opacity: 0.8 },
-            },
-          },
-        },
-      },
-    };
-  </script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        @font-face {
+            font-family: 'Playfair Display';
+            src: url('public/font/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+            font-weight: 400 900;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Playfair Display';
+            src: url('public/font/PlayfairDisplay-Italic-VariableFont_wght.ttf') format('truetype');
+            font-weight: 400 900;
+            font-style: italic;
+            font-display: swap;
+        }
+
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+
+        ul {
+            display: block;
+            list-style-type: circle;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            padding-left: 40px;
+        }
+
+        li {
+            display: list-item;
+        }
+    </style>
+    <title>Repossify · Self-Hosted maven repo</title>
 </head>
 
-<body class="bg-zinc-950 text-zinc-300 min-h-screen flex items-center justify-center overflow-hidden">
-
-  <div class="absolute w-[600px] h-[600px] bg-primary/20 blur-3xl rounded-full top-[-150px] left-[-150px] animate-pulseSoft"></div>
-  <div class="absolute w-[500px] h-[500px] bg-primary/10 blur-3xl rounded-full bottom-[-150px] right-[-150px] animate-pulseSoft"></div>
-
-  <div class="relative text-center space-y-8 px-6 animate-fade">
-
-    <div class="inline-block px-4 py-1 text-xs border border-zinc-700 rounded-full text-zinc-400 backdrop-blur">
-      🚧 UNDER DEVELOPMENT
+<body class="bg-[#141414] text-white m-[40px] flex flex-col items-center justify-center">
+    <div class="flex flex-col w-1/2">
+        <div class="w-full h-[40px] flex items-center justify-end">
+            <a href="https://github.com/d4nilpzz/repossify" target="_blank"
+                class="gap-2 h-auto px-2 py-1 w-auto flex items-center justify-center text-white border border-white/10 rounded-[12px]">
+                <img src="./public/github.svg" alt="">
+                <span>Star on Github <span id="starCount" class="font-semibold ml-2 text-[#CC9F25]">0</span> ⭐</span>
+            </a>
+        </div>
+        <h1 class="text-[40px] font-extrabold">Repossify</h1>
+        <p class="text-[20px] text-white/70 mt-2">
+            Repossify is a modern platform designed to simplify how you manage, organize, and interact with your
+            repositories. Built for speed, clarity, and developers who want full control.
+        </p>
+        <div class="border border-white/10 h-[180px] rounded-[18px] mt-8 w-full flex w-full">
+            <div class="w-full">
+                <ul>
+                    <li>Self-hosted package repository manager</li>
+                    <li>Free for personal use & small teams</li>
+                    <li>Available via Docker or standalone .jar</li>
+                </ul>
+            </div>
+            <div class="w-[1px] bg-white/10 h-full"></div>
+            <img src="./public/icon-white.png" alt="Repossify Icon" class="h-full rounded-r-[18px]">
+        </div>
+        <div class="border border-white/10 h-[40px] rounded-full mt-8 w-[40px] flex w-auto items-center px-4 space-x-3">
+            <span class="relative flex size-3">
+                <span
+                    class="absolute inline-flex h-full w-full animate-ping rounded-full bg-orange-400 opacity-75"></span>
+                <span class="relative inline-flex size-3 rounded-full bg-orange-500"></span>
+            </span>
+            <p class="">The current status of the project is under developement</p>
+        </div>
     </div>
+    <script>
+        const $ = (id) => { return document.getElementById(id) }
 
-    <h1 class="text-6xl font-bold text-white tracking-tight">
-      Repossify
-    </h1>
+        const starCount = $("starCount");
 
-    <p class="text-zinc-400 max-w-xl mx-auto text-lg leading-relaxed">
-      Repossify is a modern platform designed to simplify how you manage, organize, 
-      and interact with your repositories. Built for speed, clarity, and developers 
-      who want full control.
-    </p>
+        const repo = "https://api.github.com/repos/d4nilpzz/repossify";
 
-    <div class="flex justify-center gap-4 pt-4">
-      <a href="https://github.com/d4nilpzz/repossify"
-         target="_blank"
-         class="px-6 py-2 rounded-lg bg-primary text-white hover:bg-primary/80 transition shadow-lg shadow-primary/20">
-        View on GitHub
-      </a>
+        async function fetchGithubStar() {
+            try {
+                const response = await fetch(repo);
 
-      <button class="px-6 py-2 rounded-lg hover:border-primary/50 hover:text-white transition">
-        Coming soon ...
-      </button>
-    </div>
+                const data = await response.json();
 
-    <!-- Footer -->
-    <p class="text-xs text-zinc-600 pt-6">
-      © 2026 Repossify. All rights reserved.
-    </p>
+                starCount.innerText = data.stargazers_count
+            } catch (error) { }
+        }
 
-  </div>
+        fetchGithubStar()
 
+    </script>
 </body>
+
+
 </html>
