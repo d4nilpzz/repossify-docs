@@ -5,24 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="title" content="Repossify">
+    <meta name="title" content="Repossify · Maven Repository">
     <meta name="description"
-        content="Repossify is a modern platform to manage and organize repositories. Currently in development.">
+        content="Self-hosted Maven repository manager. Host your Java artifacts privately with full control. Free for personal use and small teams.">
 
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://repossify.dev/">
-    <meta property="og:title" content="Repossify">
+    <meta property="og:url" content="https://maven.repossify.dev/">
+    <meta property="og:title" content="Repossify · Maven Repository">
     <meta property="og:description"
-        content="Repossify is a modern platform to manage and organize repositories. Currently in development.">
+        content="Self-hosted Maven repository manager. Host your Java artifacts privately with full control.">
     <meta property="og:image" content="https://repossify.dev/public/repossify.png">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://repossify.dev/">
-    <meta name="twitter:title" content="Repossify">
-    <meta name="twitter:description" content="A modern platform for repository management.">
+    <meta name="twitter:url" content="https://maven.repossify.dev/">
+    <meta name="twitter:title" content="Repossify · Maven Repository">
+    <meta name="twitter:description"
+        content="Self-hosted Maven repository manager. Host your Java artifacts privately.">
     <meta name="twitter:image" content="https://repossify.dev/public/repossify.png">
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -49,77 +50,65 @@
         h1 {
             font-family: 'Playfair Display', Georgia, serif;
         }
-
-        ul {
-            display: block;
-            list-style-type: circle;
-            margin-top: 1em;
-            margin-bottom: 1em;
-            padding-left: 40px;
-        }
-
-        li {
-            display: list-item;
-        }
     </style>
-    <title>Repossify · Self-Hosted maven repo</title>
+    <title>Repossify · Maven Repository</title>
 </head>
 
-<body class="bg-[#141414] text-white m-[40px] flex flex-col items-center justify-center">
-    <div class="flex flex-col w-1/2">
-        <div class="w-full h-[40px] flex items-center justify-end">
-            <a href="https://github.com/d4nilpzz/repossify" target="_blank"
-                class="gap-2 h-auto px-2 py-1 w-auto flex items-center justify-center text-white border border-white/10 rounded-[12px]">
-                <img src="./public/github.svg" alt="">
-                <span>Star on Github <span id="starCount" class="font-semibold ml-2 text-[#CC9F25]">0</span> ⭐</span>
-            </a>
-        </div>
-        <h1 class="text-[40px] font-extrabold">Repossify</h1>
-        <p class="text-[20px] text-white/70 mt-2">
-            Repossify is a modern platform designed to simplify how you manage, organize, and interact with your
-            repositories. Built for speed, clarity, and developers who want full control.
-        </p>
-        <div class="border border-white/10 h-[180px] rounded-[18px] mt-8 w-full flex w-full">
-            <div class="w-full">
-                <ul>
-                    <li>Self-hosted package repository manager</li>
-                    <li>Free for personal use & small teams</li>
-                    <li>Available via Docker or standalone .jar</li>
-                </ul>
+<body class="bg-[#141414] text-white h-screen overflow-hidden flex flex-col">
+    <!-- Main -->
+    <main class="flex-1 flex items-center justify-center px-6">
+        <div class="w-full max-w-xl flex flex-col gap-6">
+
+            <!-- Status -->
+            <div class="flex items-center gap-2">
+                <span class="relative flex size-2">
+                    <span
+                        class="absolute inline-flex h-full w-full animate-ping rounded-full bg-orange-400 opacity-75"></span>
+                    <span class="relative inline-flex size-2 rounded-full bg-orange-500"></span>
+                </span>
+                <span class="text-orange-400 text-[12px] font-medium uppercase tracking-widest">In Development</span>
             </div>
-            <div class="w-[1px] bg-white/10 h-full"></div>
-            <img src="./public/icon-white.png" alt="Repossify Icon" class="h-full rounded-r-[18px]">
+
+            <!-- Hero -->
+            <div class="flex flex-col gap-3">
+                <h1 class="text-[42px] font-extrabold leading-tight">
+                    <span class="text-[#9B26DE] italic">Repossify</span>, Your private<br>
+                    Maven repository
+                </h1>
+                <p class="text-[16px] text-white/60 leading-relaxed">
+                    Repossify gives you a fully self-hosted Maven repository. Deploy with Docker or a standalone
+                    <code class="text-white/80 bg-white/5 px-1.5 py-0.5 rounded text-[13px]">.jar</code>,
+                    publish your artifacts privately, and integrate in seconds.
+                </p>
+            </div>
+
+            <!-- CTA -->
+            <div class="flex items-center gap-3">
+                <a href="https://maven.repossify.dev" target="_blank"
+                    class="px-3 py-1.5 bg-[#9C9C9C] text-black font-semibold rounded-[12px] text-[14px] transition-transform hover:-translate-y-0.5">
+                    View Example
+                </a>
+                <a href="https://github.com/d4nilpzz/repossify" target="_blank"
+                    class="gap-2 h-auto px-3 py-1.5 flex items-center text-white/80 border-[2px] border-white/10 rounded-[12px] text-[13px] hover:border-white/20 transition-colors">
+                    <span>Star on GitHub</span>
+                    <span id="starCount" class="font-semibold text-[#CC9F25]">—</span>
+                    ⭐
+                </a>
+            </div>
+
         </div>
-        <div class="border border-white/10 h-[40px] rounded-full mt-8 w-[40px] flex w-auto items-center px-4 space-x-3">
-            <span class="relative flex size-3">
-                <span
-                    class="absolute inline-flex h-full w-full animate-ping rounded-full bg-orange-400 opacity-75"></span>
-                <span class="relative inline-flex size-3 rounded-full bg-orange-500"></span>
-            </span>
-            <p class="">The current status of the project is under development</p>
-        </div>
-    </div>
+    </main>
+
     <script>
-        const $ = (id) => { return document.getElementById(id) }
-
-        const starCount = $("starCount");
-
-        const repo = "https://api.github.com/repos/d4nilpzz/repossify";
-
         async function fetchGithubStar() {
             try {
-                const response = await fetch(repo);
-
-                const data = await response.json();
-
-                starCount.innerText = data.stargazers_count
-            } catch (error) { }
+                const res = await fetch("https://api.github.com/repos/d4nilpzz/repossify");
+                const data = await res.json();
+                document.getElementById("starCount").innerText = data.stargazers_count;
+            } catch (_) { }
         }
-
-        fetchGithubStar()
-
+        fetchGithubStar();
     </script>
 </body>
-
 
 </html>
