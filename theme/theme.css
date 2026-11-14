@@ -32,9 +32,9 @@
   --border-strong: #3a3a3a;
 
   /* Accent color (active item, links, TOC) */
-  --accent: #cc9f25;
-  --accent-hover: #e0b23a;
-  --accent-text: #17120a;        /* text on top of the accent */
+  --accent: #4d9bff;
+  --accent-hover: #74b2ff;
+  --accent-text: #06142a;        /* text on top of the accent */
   --icon-color: #a3a3a3;         /* Lucide icons in the sidebar and breadcrumbs */
 
   /* Callouts > [!NOTE] etc. */
