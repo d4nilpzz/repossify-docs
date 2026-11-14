@@ -88,7 +88,6 @@ export default function LandingPage() {
             <a className="btn btn-ghost" href={siteConfig.repo} target="_blank" rel="noreferrer">
               <span>Star on GitHub</span>
               <GitHubStars repo={repoPath} />
-              <span aria-hidden>⭐</span>
             </a>
           </div>
         </section>
