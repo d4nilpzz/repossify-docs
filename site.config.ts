@@ -18,7 +18,7 @@ export const siteConfig = {
   docsBase: "/docs",
 
   // When set, every page shows an "Edit this page" link.
-  editUrl: "https://github.com/d4nilpzz/repossify-docs/edit/master/content",
+  editUrl: "https://github.com/d4nilpzz/repossify-docs/edit/main/content",
 
   locale: "en-GB",
   labels: {
