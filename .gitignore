@@ -1,0 +1,15 @@
+node_modules/
+.next/
+out/
+.pnpm-store/
+
+# Pagefind writes its index into the export
+public/pagefind/
+
+.env
+.env.*
+*.local
+
+.DS_Store
+.idea/
+.vscode/
