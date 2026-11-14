@@ -6,8 +6,10 @@ export const siteConfig = {
   description:
     "Self-hosted Maven repository manager. Host your Java artifacts privately, with per-path access tokens, upstream mirroring and a web dashboard.",
 
-  // Path inside /public
+  // Paths inside /public. `logo` is the favicon and social image mark,
+  // `logoMark` the inverted one the dark header and landing nav use.
   logo: "/icon.png",
+  logoMark: "/icon-invert.png",
 
   repo: "https://github.com/d4nilpzz/Repossify",
   releases: "https://github.com/d4nilpzz/Repossify/releases",

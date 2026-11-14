@@ -52,7 +52,7 @@ export default function LandingPage() {
       <nav className="landing-nav">
         <Link href="/" className="landing-brand">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={`${basePath}${siteConfig.logo}`} alt="" />
+          <img src={`${basePath}${siteConfig.logoMark}`} alt="" />
           <span className="wordmark">Repossify</span>
         </Link>
         <div className="landing-nav-links">
@@ -70,11 +70,6 @@ export default function LandingPage() {
 
       <main className="landing-main">
         <section className="hero">
-          <span className="status-pill">
-            <span className="status-dot" aria-hidden />
-            In development
-          </span>
-
           <h1 className="hero-title">
             <span className="wordmark">Repossify</span>, your private Maven repository
           </h1>
@@ -91,8 +86,9 @@ export default function LandingPage() {
               <ArrowRight size={16} aria-hidden />
             </Link>
             <a className="btn btn-ghost" href={siteConfig.repo} target="_blank" rel="noreferrer">
-              Star on GitHub
+              <span>Star on GitHub</span>
               <GitHubStars repo={repoPath} />
+              <span aria-hidden>⭐</span>
             </a>
           </div>
         </section>

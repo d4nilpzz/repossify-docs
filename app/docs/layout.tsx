@@ -25,7 +25,7 @@ export default function DocsLayout({ children }: LayoutProps<"/docs">) {
         <MobileNavToggle />
         <Link href="/" className="header-brand">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={`${basePath}${siteConfig.logo}`} alt="" className="header-logo" />
+          <img src={`${basePath}${siteConfig.logoMark}`} alt="" className="header-logo" />
           <span className="wordmark">{siteConfig.name}</span>
         </Link>
         <div className="flex items-center justify-end gap-2 ml-auto">

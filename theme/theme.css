@@ -32,9 +32,9 @@
   --border-strong: #3a3a3a;
 
   /* Accent color (active item, links, TOC) */
-  --accent: #f97316;
-  --accent-hover: #fb923c;
-  --accent-text: #1a1004;        /* text on top of the accent */
+  --accent: #cc9f25;
+  --accent-hover: #e0b23a;
+  --accent-text: #17120a;        /* text on top of the accent */
   --icon-color: #a3a3a3;         /* Lucide icons in the sidebar and breadcrumbs */
 
   /* Callouts > [!NOTE] etc. */
@@ -46,6 +46,7 @@
 
   /* Sizes */
   --header-height: 68px;
+  --logo-size: 52px;            /* brand logo, shared by / and /docs */
   --sidebar-width: 290px;
   --toc-width: 240px;
   --content-width: 870px;
@@ -107,8 +108,8 @@ body {
   text-decoration: none;
 }
 .header-logo {
-  width: 52px;
-  height: 52px;
+  width: var(--logo-size);
+  height: var(--logo-size);
   object-fit: contain;
 }
 .header-actions {
